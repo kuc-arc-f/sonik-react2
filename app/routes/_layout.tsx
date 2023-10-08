@@ -1,0 +1,34 @@
+import type { LayoutHandler } from '@sonikjs/preact'
+
+const handler: LayoutHandler = ({ children, head }) => {
+  return (
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {import.meta.env.PROD ? (
+          <>
+            <link href="/static/style.css" rel="stylesheet" />
+            <script type="module" src="/static/client.js"></script>
+          </>
+        ) : (
+          <>
+            <link href="/app/style.css" rel="stylesheet" />
+            <script type="module" src="/app/client.ts"></script>
+          </>
+        )}
+        {head.createTags()}
+      </head>
+      <body>
+        {/* navi */}
+        <div>
+          <a href="/">[Top]</a>
+          {/* <a href="/test"> [ Test ]</a> */}
+          <a href="/test3"> [ Test3 ]</a>
+        </div>
+        <div class="bg-gray-200 h-screen">{children}</div>
+      </body>
+    </html>
+  )
+}
+
+export default handler
