@@ -20,6 +20,13 @@ console.log(item);
             id : {item.id}
             <hr />
             CompanyName: {item.CompanyName}
+            <hr />
+            <button id="btn_delete">[ Delete ]</button>
+            <hr />
+            {/* JS  */}
+            <script>const ItemId = {item.id};
+            </script>
+            <script src="/static/js/test/TestShow.js"></script>
           </div>
         );
     } catch (e) {

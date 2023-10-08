@@ -27,6 +27,7 @@ export default async function Test3(c: Context) {
               <h3 class="text-2xl font-bold mb-2 text-gray-800 hover:text-gray-600 hover:text-underline">
                 {item.CompanyName}
               </h3>
+              <span>ID: {item.id}, </span>
               <time class="text-gray-500 text-sm" dateTime={item.createdAt}>
                 {dayjs(item.createdAt).fromNow()}
               </time>
