@@ -8,16 +8,16 @@ export default async function Test3(c: Context) {
 //console.log(items);
     //
     return (
-    <div>
+    <div className="container_base">
       <h1 className="text-4xl font-bold mb-2 text-gray-800 hover:text-gray-600 hover:text-underline">
         Test3
       </h1>
       <hr />      
       <hr />
       <label>custName:</label>
-      <input type="text" id="title" className="mx-2" />
+      <input type="text" id="title" className="input_text mx-2" />
       <hr />
-      <button id="btn_save">[ Save ]</button>
+      <button id="btn_save" className="btn">Save</button>
       <hr />
       <hr className="my-2" />
       <ul>

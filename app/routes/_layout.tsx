@@ -16,20 +16,26 @@ const handler: LayoutHandler = ({ children, head }) => {
             <script type="module" src="/app/client.ts"></script>
           </>
         )}
+        <link href="/static/styles/globals.css" rel="stylesheet" />
         {head.createTags()}
       </head>
-      <body>
+      <body className="bg-gray-200">
         {/* navi */}
-        <div>
+        <div className="text-center pt-2" >
           <a href="/">[Top]</a>
-          {/* <a href="/test"> [ Test ]</a> */}
+          {/* <a href="/test"> [ Test ]</a> 
           <a href="/test3"> [ Test3 ]</a>
+          */}
           <a href="/todos"> [ Todos ]</a>
+          <hr />
         </div>
-        <div class="bg-gray-200 h-screen">{children}</div>
+        <div className="h-screen">{children}</div>
       </body>
     </html>
   )
 }
 
 export default handler
+/*
+className="bg-gray-200 h-screen"
+*/
