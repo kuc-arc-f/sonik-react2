@@ -24,6 +24,7 @@ const handler: LayoutHandler = ({ children, head }) => {
           <a href="/">[Top]</a>
           {/* <a href="/test"> [ Test ]</a> */}
           <a href="/test3"> [ Test3 ]</a>
+          <a href="/todos"> [ Todos ]</a>
         </div>
         <div class="bg-gray-200 h-screen">{children}</div>
       </body>
